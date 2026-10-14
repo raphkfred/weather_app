@@ -2,13 +2,11 @@ from datetime import datetime
 
 from constants import SUNRISE_HOUR, SUNSET_HOUR
 
-# ----------------------------------------------------------------------
 # Météo
-# ----------------------------------------------------------------------
+
 
 def icon_of_code(code, night = False):
-    """Obtient le nom d'icône correspondant au code météo (WMO) d'Open-Meteo.
-    Si night vaut True, on remplace les icônes de soleil par des icônes de nuit."""
+
     if code == 0:
         name = "night" if night else "sunny"
     elif code in (1, 2):
@@ -28,7 +26,6 @@ def icon_of_code(code, night = False):
     return name
 
 def time_of_day():
-    """Renvoie "day" ou "night" en fonction de l'heure de la journée"""
     hour = datetime.now().hour
     if SUNRISE_HOUR <= hour < SUNSET_HOUR:
         return "day"

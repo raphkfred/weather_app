@@ -3,12 +3,11 @@ from datetime import timedelta
 
 from constants import *
 
-# ----------------------------------------------------------------------
+
 # Requêtes d'API Open-Meteo
-# ----------------------------------------------------------------------
+
 
 def get_current_weather(city):
-    """Retourne (température actuelle, code météo, t_min du jour, t_max du jour)."""
     latitude, longitude = CITIES[city]
 
     parameters = {
@@ -31,8 +30,6 @@ def get_current_weather(city):
 
 
 def get_forecast_with_codes(city, start_day):
-    """Comme get_forecast, mais renvoie aussi la liste des codes météo de chaque jour
-    (utile pour afficher une icône par jour)."""
     latitude, longitude = CITIES[city]
     end_day = start_day + timedelta(days = 6)   # 7 jours : start_day + 6 jours
 
@@ -56,6 +53,5 @@ def get_forecast_with_codes(city, start_day):
 
 
 def get_forecast(city, start_day):
-    """Retourne (dates, temperatures_min, temperatures_max) pour 7 jours à partir de start_day."""
     dates, temperatures_min, temperatures_max, _ = get_forecast_with_codes(city, start_day)
     return dates, temperatures_min, temperatures_max

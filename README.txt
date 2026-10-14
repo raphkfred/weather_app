@@ -1,6 +1,5 @@
-## Projet d'application météo (XTI301 Ecosystème Python)
-
-Pour lancer l'application, exécutez le programme main.py :
+ Realise par karine et raphael
+ Projet d'application météo ( Ecosystème Python)
 
     pip install -r requirements.txt
     python main.py

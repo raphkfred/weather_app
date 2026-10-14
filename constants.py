@@ -1,6 +1,3 @@
-# ----------------------------------------------------------------------
-# Constantes
-# ----------------------------------------------------------------------
 
 CITIES = {
     "Paris":        (48.8566,  2.3522),
@@ -19,11 +16,10 @@ WIDTH = 400
 HEIGHT = 500
 URL_API = "https://api.open-meteo.com/v1/forecast"
 
-# Heures de jour (le soleil est considéré levé entre ces deux heures)
+
 SUNRISE_HOUR = 7
 SUNSET_HOUR = 20
 
-# Limites de navigation dans le menu des prévisions (en jours par rapport à aujourd'hui)
-# L'API gratuite fournit jusqu'à 92 jours d'historique et 16 jours de prévisions.
+
 MAX_DAYS_BACK = 91
 MAX_DAYS_FORWARD = 9

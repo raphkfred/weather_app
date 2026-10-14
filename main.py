@@ -10,9 +10,7 @@ from menu import *
 window = None
 canvas = None
 
-# ----------------------------------------------------------------------
-# Programme principal
-# ----------------------------------------------------------------------
+
 
 def main():
     global window, canvas
